@@ -1,0 +1,167 @@
+div {
+    display: flex;
+    justify-content: center;
+    font-family: 'Hoope', sans-serif;
+}
+
+.divbt {
+    margin-left: auto;
+}
+
+td {
+    display: flex;
+    align-items: center;
+}
+
+.titulo-tabela{
+  font-family: 'Russo One', sans-serif;
+  font-size: 1.2em;
+  font-weight: normal;
+}
+
+button {
+    margin: 0.2em;
+}
+
+table {
+    width: 80%;
+}
+
+.table-responsive{
+  padding-top: 2em;
+}
+
+#btn-estilo {
+    background-color: #333;
+    border-color: gray;
+}
+
+#btn-estilo:hover {
+    background-color: rgb(112, 111, 111);
+    border-color: gray;
+}
+
+#btn-concluir {
+    background-color: rgb(151, 93, 168);
+    border-color: rgb(151, 93, 168);
+}
+
+#btn-concluir:hover {
+    background-color: rgba(151, 93, 168, 0.74);
+    border-color: rgb(151, 93, 168);
+}
+
+//datas estilo
+
+.data-tarefas {
+    align-self: center;
+    margin-right: 1.5em;
+    margin-left: 3em;
+}
+
+#input-data-edit {
+    margin-left: 0.4em;
+    border-radius: 7px;
+}
+
+.template-ng {
+  padding-top: 1em;
+  font-size: 1.1em;
+  font-family: 'Russo One', sans-serif;
+  font-weight: normal;
+}
+
+.template-ng-concluido {
+  display: flex;
+}
+
+.template-concluido {
+  justify-content: center;
+}
+
+
+//////////////////////////////////////////////Lista-de-Concluidas///////////////////////////////////////////////////////
+
+
+.list-group {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 3em;
+
+}
+
+button {
+    margin-left: 0.5em;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    font-family: 'Hoope', sans-serif;
+}
+
+.divbt2 {
+    margin-left: auto;
+}
+
+.titulo {
+    margin-top: 2em;
+    justify-content: center;
+}
+
+h2 {
+
+    font-size: 1.2em;
+    font-family: 'Russo One', sans-serif;
+}
+
+#janelaEdicaoFundo {
+    align-self: center;
+    position: fixed;
+    top: 0;
+    background-color: rgba(51, 51, 51, 0.95);
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    right: 0;
+}
+
+
+#janelaEdicao {
+    margin: 0 auto;
+    position: relative;
+    bottom: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    padding: 20px;
+    background-color: #333;
+    border: 1px solid #333;
+    border-radius: 12px;
+    z-index: 200;
+
+}
+
+@media screen and (max-width: 800px) {
+
+  .list-group {
+    width: 100%;
+  }
+
+  .list-group-item {
+    width: 100%;
+  }
+
+  .table-responsive {
+    width: 100%;
+  }
+
+  #janelaEdicao {
+    width: 100%;
+  }
+}
+
+
+

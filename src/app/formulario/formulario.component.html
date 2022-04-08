@@ -1,0 +1,11 @@
+<form class="form-floating" (ngSubmit)="adicionarTarefa()">
+  <input type="text" class="form-control" id="tarefa" placeholder="tarefa" name="tarefa" [(ngModel)]="tarefa" required>
+  <input type="date" name="data" id="data" class="input-data" [(ngModel)]="data" required>
+  <label for="tarefa" class="tarefa-input">Informe a tarefa</label>
+  <button type="submit" class="btn btn-secondary" id="btn-estilo">
+    <span class="material-icons">
+      add_circle
+    </span>
+  </button>
+
+</form>

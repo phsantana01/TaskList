@@ -1,0 +1,18 @@
+.cabecalho {
+    background-color: #333;
+    display: flex;
+    align-items: center;
+
+
+    .logo_cabecalho {
+        width: 3em;
+        padding: 0.3em;
+    }
+
+    .titulo_cabecalho {
+        font-family: 'Inconsolata', monospace;
+        font-weight: bold;
+        color: rgb(151, 93, 168);
+        margin: 0;
+    }
+}

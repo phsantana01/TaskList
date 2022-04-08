@@ -1,0 +1,42 @@
+form {
+  width: 60%;
+  display: flex;
+  padding: 0.5em;
+  margin: 0 auto;
+}
+
+label {
+  padding: 1em;
+}
+
+button {
+  margin-left: 0.4em;
+}
+
+input {
+  margin: 0 auto;
+}
+
+.tarefa-input {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: bold;
+
+}
+
+#btn-estilo {
+  background-color: #333;
+  border-color: gray;
+}
+
+#btn-estilo:hover {
+  background-color: rgb(112, 111, 111);
+  border-color: gray;
+}
+
+.input-data {
+  margin-left: 0.6em;
+  border-radius: 11px;
+  padding: 0.5em;
+  background-color: #333;
+  color: white;
+}

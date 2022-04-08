@@ -1,0 +1,116 @@
+<div class="divEdicao" [ngStyle]="{'display': display}">
+  <div class="input-group mb-3" id="janelaEdicao">
+    <input type="text" class="form-control" aria-describedby="basic-addon2" name="valorEditado"
+      [(ngModel)]="tarefaEditadaDescricao">
+    <div class="input-group-append">
+      <input type="date" class="form-control" aria-describedby="basic-addon2" id="input-data-edit" name="DataEditada"
+      [(ngModel)]="dataEditada" required>
+      <button class="btn btn-outline-secondary" type="button" (click)="atualizarTarefaPendente()">
+        <i class="material-icons">
+          refresh
+        </i>
+      </button>
+    </div>
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary" type="button" (click)="fecharJanelaEdicaoTarefa()">
+        <i class="material-icons">
+          close
+        </i>
+      </button>
+    </div>
+  </div>
+  <div id="janelaEdicaoFundo" [ngStyle]="{'display': display}">
+  </div>
+</div>
+
+<div class="table-responsive">
+  <table class="table align-middle">
+    <thead>
+      <th class="titulo-tabela">
+        Tarefas
+      </th>
+    </thead>
+    <tbody *ngIf="pendentes > 0; else listaVazia">
+      <tr *ngFor="let tarefa of tarefas; let i = index">
+        <td>
+          {{tarefa.descricao}} <div class="divbt">
+            <span class="data-tarefas">{{tarefa.data | date: 'EEEE, MMMM d, y' : 'pt_BR'}}</span>
+            <button type="button" class="btn btn-secondary btn-sm" id="btn-estilo" (click)="abrirJanelaEdicaoTarefa(i)">
+              <span class="material-icons">
+                edit
+              </span>
+            </button>
+            <button type="button" class="btn btn-secondary btn-sm" id="btn-estilo" (click)="excluir(tarefa.id)">
+              <span class="material-icons">
+                delete
+              </span>
+            </button>
+            <button type="button" class="btn btn-secondary btn-sm" id="btn-concluir" (click)="concluir(tarefa.id)">
+              <span class="material-icons">
+                check_circle_outline
+              </span>
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<ng-template #listaVazia>
+  <p class="template-ng">Nenhuma tarefa adicionada</p>
+</ng-template>
+
+
+<div class="divEdicao" [ngStyle]="{'display': displayConcluidas}">
+  <div class="input-group mb-3" id="janelaEdicao">
+    <input type="text" class="form-control" aria-describedby="basic-addon2" name="valorEditado"
+      [(ngModel)]="tarefaCdEditadaDescricao">
+    <div class="input-group-append">
+      <input type="date" class="form-control" aria-describedby="basic-addon2" id="input-data-edit" name="dataEditadaCd"
+      [(ngModel)]="dataEditadaCd" required>
+      <button class="btn btn-outline-secondary" type="button" (click)="atualizarTarefaConcluida()">
+        <i class="material-icons">
+          refresh
+        </i>
+      </button>
+    </div>
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary" type="button" (click)="fecharJanelaEdicaoTarefaConcluida()">
+        <i class="material-icons">
+          close
+        </i>
+      </button>
+    </div>
+  </div>
+  <div id="janelaEdicaoFundo" [ngStyle]="{'display': displayConcluidas}">
+  </div>
+</div>
+
+
+<div class="titulo">
+  <h2>Tarefas concluídas</h2>
+</div>
+
+<ul class="list-group"  id="datas" *ngIf="concluidas > 0; else listaVaziaCd">
+  <li class="list-group-item" *ngFor="let tarefa of tarefasConcluidas; let i = index">{{tarefa.descricao}}
+    <div class="divbt2">
+      <span class="data-tarefas">{{tarefa.data | date: 'EEEE, MMMM d, y' : 'pt_BR'}}</span>
+      <button type="button" class="btn btn-secondary btn-sm" id="btn-estilo"
+        (click)="abrirJanelaEdicaoTarefaConcluida(i)">
+        <i class="material-icons">edit</i>
+      </button>
+      <button type="button" class="btn btn-secondary btn-sm" id="btn-estilo" (click)="excluir(tarefa.id)">
+        <span class="material-icons">delete</span>
+      </button>
+      <button type="button" class="btn btn-secondary btn-sm" id="btn-concluir" (click)="deixarPendente(tarefa.id)">
+        <i class="material-icons">description</i>
+      </button>
+    </div>
+  </li>
+</ul>
+
+<ng-template #listaVaziaCd class="template-ng-concluido">
+  <div class="template-concluido">
+    <p class="template-ng" >Nenhuma tarefa concluida</p>
+  </div>
+</ng-template>

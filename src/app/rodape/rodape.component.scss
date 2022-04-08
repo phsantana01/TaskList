@@ -1,0 +1,16 @@
+.rodape {
+    flex-shrink: 0;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5em;
+    width: 100%;
+
+
+    .rodape_conteudo {
+        font-size: 1.3em;
+        font-family: 'Inconsolata', monospace;
+        font-weight: bold;
+        color: rgb(151, 93, 168);
+    }
+}
